@@ -1,0 +1,35 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<!-- <Button core:require="{ handler: 'customcreate/ext/fragment/CUSTOM'}" text="Edit" press="handler.onPress" /> -->
+        	
+    			
+		<!-- <Button  core:require="{ handler: 'customcreate/ext/fragment/CUSTOM'}" press="handler.onPress" text="Edit" ariaHasPopup="Dialog"/> -->
+
+       
+		<Dialog id="helloDialog" resizable="true" draggable="true" title="Employee Details"  class="sapUiResponsiveContentPadding" >
+		 <VBox>
+				<Label  showColon="true" text="id" />
+				<Input id="id" />
+				<Label  showColon="true" text="sname" />
+				<Input id="sname" />
+                <Label  showColon="true" text="snum" />
+				<Input id="snum" />
+           
+          	<Toolbar>
+            <Button id="Edit"
+                text="Edit"
+                press="handler.Edit"
+                core:require="{ handler: 'popups/ext/controller/Buttons'}"
+                type="Emphasized" 
+                enabled="true"/>
+       
+            <Button id="CANCEL"
+                text="CANCEL"
+                 core:require="{ handler: 'popups/ext/controller/Buttons'}"
+                press="handler.CANCEL"
+                enabled="true" />
+       	</Toolbar>
+
+          </VBox>
+          </Dialog>
+	
+</core:FragmentDefinition>
